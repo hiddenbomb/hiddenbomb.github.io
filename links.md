@@ -7,9 +7,9 @@ tags: [链接,友情,交换]
 本站只换首页链接，交换请做好本站链接后留言！  
 本站链接：
 
->站名：潘学文博客  
->网址：http://www.panxw.com  
->说明：潘学文个人博客  
+>站名：Mortred  
+>网址：http://mortred.me
+>说明：Blog of Mortred  
 
 留言格式参考本站链接，谢谢!
 
