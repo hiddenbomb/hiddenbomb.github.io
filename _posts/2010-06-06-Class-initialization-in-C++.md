@@ -4,27 +4,29 @@
 
 请看如下代码：
 
-	#include <iostream>
-	#include <string>
-	using namespace std;
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
 
-	class A
+class A
+{
+public:
+	A() : n(5), str("hello")
 	{
-	public:
-		A() : n(5), str("hello")
-		{
-			cout << n << " " << str << endl;
-		}
-	private:
-		string str;
-		int n;
-	};
-
-	int main(int argc, char* argv[])
-	{
-		A a;
-		return 0;
+		cout << n << " " << str << endl;
 	}
+private:
+	string str;
+	int n;
+};
+
+int main(int argc, char* argv[])
+{
+	A a;
+	return 0;
+}
+```
 
 编译选项为`-Wall -Werror`，所用编译器及系统信息如下：
 `g++ (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)`
@@ -46,38 +48,40 @@
 
 ##1. 类组合时初始化列表的顺序
 
-	#include <iostream>
-	using namespace std;
+```c++
+#include <iostream>
+using namespace std;
 
-	class A
-	{
-	public:
-		A() { cout << "build A" << endl; }
-		~A() { cout << "destroy A" << endl; }
-	};
+class A
+{
+public:
+	A() { cout << "build A" << endl; }
+	~A() { cout << "destroy A" << endl; }
+};
 
-	class B
-	{
-	public:
-		B() { cout << "build B" << endl; }
-		~B() { cout << "destroy B" << endl; }
-	};
+class B
+{
+public:
+	B() { cout << "build B" << endl; }
+	~B() { cout << "destroy B" << endl; }
+};
 
-	class C
-	{
-	public:
-		C() : a(A()), b(B()) { cout << "build C" << endl; }
-		~C() { cout << "destroy C" << endl; }
-	private:
-		A a;
-		B b;
-	};
+class C
+{
+public:
+	C() : a(A()), b(B()) { cout << "build C" << endl; }
+	~C() { cout << "destroy C" << endl; }
+private:
+	A a;
+	B b;
+};
 
-	int main(int argc, char* argv[])
-	{
-		C c;
-		return 0;
-	}
+int main(int argc, char* argv[])
+{
+	C c;
+	return 0;
+}
+```
 Class C有两个成员分别是a和b，在初始化列表中初始化a和b，得到的输出结果如下：
 
 	build A
@@ -100,35 +104,37 @@ Class C有两个成员分别是a和b，在初始化列表中初始化a和b，得
 ##2. 继承情况下的类构造析构顺序
 将上文中的例子稍加改动，如果类C继承了类A和B，代码如下：
 
-	#include <iostream>
-	using namespace std;
+```c++
+#include <iostream>
+using namespace std;
 
-	class A
-	{
-	public:
-		A() { cout << "build A" << endl; }
-		~A() { cout << "destroy A" << endl; }
-	};
+class A
+{
+public:
+	A() { cout << "build A" << endl; }
+	~A() { cout << "destroy A" << endl; }
+};
 
-	class B
-	{
-	public:
-		B() { cout << "build B" << endl; }
-		~B() { cout << "destroy B" << endl; }
-	};
+class B
+{
+public:
+	B() { cout << "build B" << endl; }
+	~B() { cout << "destroy B" << endl; }
+};
 
-	class C ： public A, public B
-	{
-	public:
-		C() { cout << "build C" << endl; }
-		~C() { cout << "destroy C" << endl; }
-	};
+class C ： public A, public B
+{
+public:
+	C() { cout << "build C" << endl; }
+	~C() { cout << "destroy C" << endl; }
+};
 
-	int main(int argc, char* argv[])
-	{
-		C c;
-		return 0;
-	}
+int main(int argc, char* argv[])
+{
+	C c;
+	return 0;
+}
+```
 输出结果为：
 
 	build A
