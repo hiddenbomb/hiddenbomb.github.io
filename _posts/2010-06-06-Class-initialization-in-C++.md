@@ -90,6 +90,7 @@ Class C有两个成员分别是a和b，在初始化列表中初始化a和b，得
 	destroy C
 	destroy B
 	destroy A
+	
 如果将Class C中声明a和b的顺序交换一下，在-Wall -Werror的编译选项下编译不通过（见前文），但在普通编译选项下，编译通过得到的结果是：
 
 	build B
@@ -143,6 +144,7 @@ int main(int argc, char* argv[])
 	destroy C
 	destroy B
 	destroy A
+	
 如果继承的顺序改为`class C : public B, public A`，输出结果为：
 
 	build B
@@ -151,6 +153,7 @@ int main(int argc, char* argv[])
 	destroy C
 	destroy A
 	destroy B
+	
 可以看出，父类的构造顺序与继承列表的顺序有关，构造时先构造父类，析构时先析构子类。
 
 如果是**虚拟继承**的情况，
