@@ -11,14 +11,14 @@ url: http://mortred.me
 domain: mortred.me
 all_categories: [
 ["C++", "C++开发","/posts/C++.html"], 
-["web", "Web建站","/posts/web.html"], 
 ["linux", "Linux相关","/posts/linux.html"],
+["web", "Web建站","/posts/web.html"], 
 ["about", "关于","/about.html"]
 ]
 
 paginate: 8
 paginate_path: "posts/page:num"
-timezone: America/Los_Angeles
+timezone: Asia/Beijing
 
 collections:
   docs:
