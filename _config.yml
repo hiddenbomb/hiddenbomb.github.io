@@ -10,12 +10,9 @@ name: "Mortred"
 url: http://mortred.me
 domain: mortred.me
 all_categories: [
-["android", "Android开发","/posts/android.html"], 
-["program", "软件编程","/posts/program.html"],
+["C++", "C++开发","/posts/C++.html"], 
 ["web", "Web建站","/posts/web.html"], 
 ["linux", "Linux相关","/posts/linux.html"],
-["read", "读书笔记","/posts/read.html"], 
-["other", "杂记","/posts/other.html"],
 ["about", "关于","/about.html"]
 ]
 
