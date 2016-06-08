@@ -8,7 +8,7 @@ Welcome to visit my blog!
 Name: Mortred  
 Gender: Male  
 City: Shanghai, China  
-Career: Software developer  
+Career: Software Engineer 
 
 #### 2.My Links
 Blog: <http://mortred.me>  
