@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Linux"
+category: "Linux相关"
 title:  "浅析几种网络I/O模型"
 tags: [Linux]
 ---

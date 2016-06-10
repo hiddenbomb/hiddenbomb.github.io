@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "C++"
+category: "C++开发"
 title:  "C++中类的初始化、构造与析构的顺序"
 tags: [C++]
 ---
