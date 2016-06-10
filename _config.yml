@@ -12,7 +12,7 @@ url: http://mortred.me
 domain: mortred.me
 all_categories: [
 ["C++", "C++开发","/posts/C++.html"], 
-["linux", "Linux相关","/posts/linux.html"],
+["linux", "Linux相关","/posts/Linux.html"],
 ["web", "Web建站","/posts/web.html"], 
 ["about", "关于","/about.html"]
 ]
