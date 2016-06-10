@@ -1,3 +1,10 @@
+---
+layout: post
+category: "Linux"
+title:  "浅析几种网络I/O模型"
+tags: [Linux]
+---
+
 # UNIX网络编程读书笔记
 
 ## （一）网络I/O中的阻塞、非阻塞、同步和异步
