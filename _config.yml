@@ -1,6 +1,7 @@
-markdown: kramdown
-highlighter: rouge
+markdown: rdiscount
+highlighter: pygments
 permalink: /posts/:title.html
+safe: true
 excerpt_separator: "<!-- more -->"
 
 github: hiddenbomb
@@ -16,7 +17,7 @@ all_categories: [
 ["about", "关于","/about.html"]
 ]
 
-paginate: 8
+paginate: 16
 paginate_path: "posts/page:num"
 timezone: Asia/Beijing
 
